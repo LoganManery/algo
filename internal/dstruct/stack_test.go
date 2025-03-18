@@ -115,7 +115,7 @@ func TestPeekStack(t *testing.T) {
 	}
 
 	// Peek again - should still be the same item
-	item, err = s.Peek()
+	item, _ = s.Peek()
 	if item != 20 {
 		t.Errorf("Expected peek to return 20 again, got %v", item)
 	}

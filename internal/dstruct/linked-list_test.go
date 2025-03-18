@@ -31,7 +31,7 @@ func TestAppend(t *testing.T) {
 	}
 
 	if list.Head.Value != 10 {
-		t.Errorf("Expected 10, got %d")
+		t.Errorf("Expected 10, got %d", list.Head.Value)
 	}
 
 	if list.Tail != list.Head {
@@ -45,7 +45,7 @@ func TestAppend(t *testing.T) {
 	list.Append(20)
 
 	if list.Head.Value != 10 {
-		t.Errorf("Expected 10, got %d")
+		t.Errorf("Expected 10, got %d", list.Head.Value)
 	}
 
 	if list.Tail.Value != 20 {

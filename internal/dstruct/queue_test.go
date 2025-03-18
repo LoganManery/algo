@@ -72,7 +72,7 @@ func TestDequeue(t *testing.T) {
 	}
 
 	if item != 20 {
-		t.Error("Expected 20, got %v", item)
+		t.Errorf("Expected 20, got %v", item)
 	}
 
 	// Dequeue until empty
@@ -117,7 +117,7 @@ func TestPeek(t *testing.T) {
 	}
 
 	// Peek again - should still be the same item
-	item, err = q.Peek()
+	item, _ = q.Peek()
 	if item != 10 {
 		t.Errorf("Expected peek to return 10 again, got %v", item)
 	}
